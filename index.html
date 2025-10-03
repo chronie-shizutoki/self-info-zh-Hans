@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自介 (华文)</title>
+    <link rel="stylesheet" href="components/splash-screen.css">
+    <link rel="stylesheet" href="components/style.css">
+    <link rel="stylesheet" href="components/liquid-glass-block.css">
+    <link rel="stylesheet" href="components/birthday.css">
+    <link rel="stylesheet" href="components/region-toggle.css">
+</head>
+<body>
+    <!-- Privacy Consent Popup -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <h3 class="privacy-title">隐私政策同意</h3>
+            <p class="privacy-text">本网站使用Google Analytics 4（GA4）进行分析，以改进用户体验和网站性能。</p>
+            <p class="privacy-text">访问时，会收集您的个人数据（如设备信息、IP地址、Cookie、精确位置信息等），并将其分享给Google海外服务器。</p>
+            <p class="privacy-text">为了保护您的隐私，我们会尽力匿名化/假名化您的数据。</p>
+            <div class="privacy-links">
+                <a href="https://storage.googleapis.com/support-kms-prod/KYaKZ5CAhIQ4rjgEFWIy6qKRzRSJjdGjrYFW" target="_blank" class="privacy-link">了解更多（英文）</a>
+                <a href="document-my.html" class="privacy-link">隐私政策（马来西亚）</a>
+                <a href="document-sg.html" class="privacy-link">隐私政策（新加坡）</a>
+            </div>
+            <div class="privacy-buttons">
+                <button id="consent-accept" class="consent-button accept">继续...访问？</button>
+                <button id="consent-reject" class="consent-button reject">拒绝...退出？</button>
+            </div>
+            <p class="privacy-text consent-warning">继续访问可能会将您的数据流向美国，也许会受到美国法律管辖哦~</p>
+        </div>
+    </div>
+<body>
+    <!-- Loading Screen with Girl's Prayer -->
+    <div id="loading-screen" class="splash-screen hidden">
+        <div class="splash-content-girl">
+            <div class="loader"></div>
+            <p class="splash-text">少女祈祷中…</p>
+        </div>
+    </div>
+
+    <canvas id="sakura-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1;"></canvas>
+    <div class="header" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+        <div class="glass-container-apple">
+            <p class="info-text" data-i18n="greeting"></p>
+            <p><span class="info-text" data-i18n="callMe"></span><strong class="highlight">静時猫猫糖（しずときねこたん shizutoki nekotan）</strong></p>
+            <p><span class="info-text" data-i18n="or"></span><strong class="highlight">Chronie</strong><span class="info-text" data-i18n="alsoWorks"></span></p>
+        </div>
+    </div>
+<br>
+    <div class="section">
+        <div class="glass-container-apple">
+        <h3 class="section-title" data-i18n="birthTitle"></h3>
+        <div class="compact-countdown" id="countdown">
+            <span class="cake-icon">🎂</span>
+            <span class="birthday-today" data-i18n="birthToday"></span>
+        </div>
+        <ul>
+            <li><span class="info-text">在</span><strong class="highlight">Virgo</strong><strong class="highlight ql-size-5" data-i18n="birthDesc1"></strong><span class="info-text">来到地球咯～</span></li>
+            <li><span class="info-text">（</span><strong class="highlight">农历七月十一</strong><span class="info-text">的月光是<span data-i18n="birthDesc2"></span>的摇篮曲哟！🌙） </span></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container-apple">
+        <h3 class="section-title" data-i18n="languageTitle"></h3>
+        <ul>
+            <li><strong style="color: #d5ffbf;"><span data-i18n="languages"></span></strong><span class="info-text" data-i18n="allCan"></span></li>
+            <li><span class="info-text" data-i18n="languageDesc"></span></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container-apple">
+        <h3 class="section-title" data-i18n="acgnTitle"></h3>
+        <ul>
+            <li><span class="info-text" data-i18n="acgnConfirm"></span></li>
+            <li><span class="info-text" data-i18n="acgnDesc1"></span><strong class="highlight" data-i18n="acgnDesc2"></strong><span class="info-text">～ ★~(◠‿◕✿)</span></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container-apple">
+        <h3 class="section-title" data-i18n="mindTitle"></h3>
+        <ul>
+            <li><span class="info-text">  </span><span class="highlight" data-i18n="chargeMode"></span><span class="info-text" data-i18n="chargeDesc1"></span><strong style="color: #ffeebf;" data-i18n="chargeDesc2"></strong></li>
+            <li><span class="info-text">  </span><span class="highlight" data-i18n="brainTheater"></span><span class="info-text" data-i18n="brainDesc1"></span><strong style="color: #ffeebf;" data-i18n="brainDesc2"></strong></li>
+            <li><span class="info-text">  </span><span class="highlight" data-i18n="senseRadar"></span><span class="info-text" data-i18n="senseDesc1"></span><strong style="color: #ffeebf;" data-i18n="senseDesc2"></strong></li>
+            <li><span class="info-text">  </span><span class="highlight" data-i18n="actionMode"></span><span class="info-text" data-i18n="actionDesc1"></span><strong style="color: #ffeebf;" data-i18n="actionDesc2"></strong></li>
+            <li><span class="info-text">  </span><span class="highlight" data-i18n="moodBarometer"></span><span class="info-text" data-i18n="moodDesc1"></span><strong style="color: #ffeebf;" data-i18n="moodDesc2"></strong></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container-apple">
+        <h3 class="section-title" data-i18n="luckyTitle"></h3>
+        <p><span class="info-text" data-i18n="luckyDesc"></span><strong class="highlight" data-i18n="luckyDesc2"></strong><span class="info-text">）(⁄ ⁄>⁄ω⁄<⁄ ⁄)）</span></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="glass-container-apple">
+        <h3 class="section-title" data-i18n="gameTitle"></h3>
+        <p><span class="info-text" data-i18n="gameDesc"></span><strong class="highlight" data-i18n="gameDesc2"></strong><span class="info-text" data-i18n="gameDesc3"></span><strong class="highlight" data-i18n="gameDesc4"></strong><span class="info-text" data-i18n="gameDesc5"></span></p>
+        </div>
+        <br>
+        <div class="glass-container-apple" style="text-align: center;">
+        <p><span class="info-text" data-i18n="greeting2"></span></p>
+        <p><span class="info-text" data-i18n="friendWish"></span></p>
+        <p><span class="info-text">(๑˃ᴗ˂)ﻭ ✧ </span></p>
+        </div>
+    </div>
+
+    <div style="padding: 8px 16px; background-color: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center; font-size: 14px; color: white; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.2);">
+        <p>This version is localized and translated by AI, and the text may be insufficient, so please be patient.</p>
+        <p>这个版本是AI本地化和翻译的，可能不够完美，还请多多包涵啦~</p>
+    </div>
+
+    <div style="text-align: center; padding: 20px 0 10px; font-size: 12px; color: white; opacity: 0.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
+        近月少女的礼仪  樱小路露娜
+        <br>
+        Pixiv ID | 133337546
+    </div>
+
+    <div style="position: fixed; bottom: 10px; transform: translateX(-50%); z-index: 1000;">
+        <a href="https://jyskyp4y.forms.app/untitled-form" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px); border-radius: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center; font-size: 14px; color: white; font-weight: 500; text-decoration: none; border: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease;" >📝</a>
+    </div>
+
+    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); padding: 8px 16px; background-color: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); border-radius: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center; font-size: 14px; color: #ffcc80; font-weight: 500; z-index: 1000; border: 1px solid rgba(255, 255, 255, 0.2);" data-date="2025.10.4">
+    </div>
+    <style>
+        @media (max-width: 450px) {
+            div[style*="font-size: 16px"] {
+                font-size: 12px !important;
+                padding: 3px 3px;
+            }
+            
+            div[style*="font-size: 14px"] {
+                font-size: 9px !important;
+                padding: 3px 3px;
+            }
+
+            div[style*="font-size: 12px"] {
+                font-size: 8px !important;
+                padding: 2px 2px;
+            }
+        }
+    </style>
+    <script src="components/birthday.js"></script>
+    <script src="components/splash-screen.js"></script>
+    <script src="components/language-selector.js"></script>
+    <script src="components/region-toggle.js"></script>
+    <script src="components/date-utils.js" type="module"></script>
+    <script type="module" src="anime/sakura.js"></script>
+<script type="module" src="analytics/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* 液态玻璃风格地区切换开关 */
+.region-toggle {
+    position: fixed;
+    top: 20px;
+    right: 140px; /* 位于语言按钮左侧 */
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* 切换开关容器 */
+.toggle-container {
+    position: relative;
+    width: 80px;
+    height: 36px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 切换滑块 */
+.toggle-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #a6deff;
+}
+
+/* 滑块在新加坡位置时 */
+.toggle-container.active .toggle-slider {
+    transform: translateX(44px);
+    color: #dbA6ff;
+}
+
+/* 地区标签 */
+.region-labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    pointer-events: none;
+}
+
+.region-label {
+    font-weight: bold;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.region-label.malaysia {
+    color: #a6deff;
+}
+
+.region-label.singapore {
+    color: #dbA6ff;
+}
+
+/* 悬停效果 */
+.toggle-container:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 点击效果 */
+.toggle-container:active {
+    transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .region-toggle {
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 14px;
+    }
+    
+    .toggle-container {
+        width: 70px;
+        height: 30px;
+    }
+    
+    .toggle-slider {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+    
+    .toggle-container.active .toggle-slider {
+        transform: translateX(40px);
+    }
+}
