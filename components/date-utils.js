@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalDate = el.getAttribute('data-date');
         const converted = convertDate(originalDate);
         if (converted) {
-            el.textContent = `✨ 更新于${converted} ✨`;
+            el.textContent = `✨ ${converted} | 更新记录 ✨`;
         }
     });
 });
