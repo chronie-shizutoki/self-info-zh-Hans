@@ -2,7 +2,7 @@
 .region-toggle {
     position: fixed;
     top: 20px;
-    right: 140px; /* 位于语言按钮左侧 */
+    right: 130px; /* 位于语言按钮左侧 */
     z-index: 10000;
     display: flex;
     align-items: center;
