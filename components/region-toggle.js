@@ -61,58 +61,6 @@ class RegionToggle {
     }
 
     /**
-     * 获取默认回退翻译
-     */
-    getFallbackTranslations() {
-        // 提供基本的回退翻译
-        return {
-              "greeting": "Hi，初次见面～ (◕‿◕✿)",
-              "callMe": "你可以叫我",
-              "or": "或者像星星一样闪亮的名字",
-              "alsoWorks": "也可以哦！✨",
-              "birthTitle": "🎂 诞生小秘密",
-              "birthToday": "今天、就是生日哦！(＊´∀｀*)ﾉ",
-              "birthDesc1": "魔法绽放的第一天",
-              "birthDesc2": "我",
-              "languageTitle": "🗣️语言小口袋",
-              "languages": "日语、English、简体中文、繁体中文",
-              "allCan": "都可以哦～",
-              "languageDesc": "切换语言就像换帽子一样好玩呢！(◕‿◕✿)）",
-              "acgnTitle": "🌈 ACGN Fan",
-              "acgnConfirm": "确认！",
-              "acgnDesc1": "Anime、Manga、Game、Novel是我小宇宙的",
-              "acgnDesc2": "基本粒子",
-              "mindTitle": "💖 心灵小拼图 (INFJ-T 版)",
-              "chargeMode": "充电能量场：",
-              "chargeDesc1": "83%需要安静的独处时间",
-              "chargeDesc2": "（躲在被窝里看书最幸福啦～(｡>ㅅ<｡)）",
-              "brainTheater": "脑内小剧场：",
-              "brainDesc1": "74%天马行空中",
-              "brainDesc2": "（幻想世界的大门永远敞开！🚪✨）",
-              "senseRadar": "感受力天线：",
-              "senseDesc1": "82%超敏感接收中",
-              "senseDesc2": "（小情绪也许能感应到哦 (｡･ω･｡)）",
-              "actionMode": "行动小策略：",
-              "actionDesc1": "83%Plan好才做喵",
-              "actionDesc2": "（列清单是我的小爱好✓）",
-              "moodBarometer": "心情小云朵：",
-              "moodDesc1": "82%容易下雨☁️➡️🌧️",
-              "moodDesc2": "（但一道彩虹就能马上开心回啦！(๑>◡<๑)）",
-              "luckyTitle": "🍀 幸运小雷达",
-              "luckyDesc": "信号很弱中……（",
-              "luckyDesc2": "捡到四叶草会爽一整天！",
-              "gameTitle": "🎮 游戏小天地",
-              "gameDesc": "目前只玩",
-              "gameDesc2": "《Genshin》",
-              "gameDesc3": "和",
-              "gameDesc4": "《Honkai: Star Rail (崩铁)》",
-              "gameDesc5": "哦～☆ﾐ(o･ω･)ﾉ）",
-              "greeting2": "请多多指教～",
-              "friendWish": "希望和你成为Kaki！一起分享快乐的小宇宙吧～ (●'◡'●) ♡"
-        };
-    }
-
-    /**
      * 应用翻译到页面
      */
     applyTranslations() {
